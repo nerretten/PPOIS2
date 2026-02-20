@@ -22,7 +22,6 @@ def test_print_functions(core, capsys):
     print_help()
 
     out, _ = capsys.readouterr()
-    # ИСПРАВЛЕНО: ищем слова из нового интерфейса
     assert "Энергия:" in out
     assert "Доступные команды" in out
     assert "ИНСТРУКЦИЯ" in out
@@ -80,7 +79,6 @@ def test_handle_museum_valid(mock_input, core, capsys):
     assert "РЕЗУЛЬТАТ" in out
 
 
-# ИСПРАВЛЕНО: Правильный перехват выхода из программы
 @patch('builtins.input', side_effect=['0'])
 def test_main_exit(mock_input):
     """Симулируем запуск игры и мгновенный выход (пользователь ввел '0')."""

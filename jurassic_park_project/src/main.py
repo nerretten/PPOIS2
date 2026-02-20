@@ -1,11 +1,13 @@
 import sys
 
 from src.services import (
+
     SimulationCore,
     ExcavationService,
     ResearchService,
     MuseumService,
-    SimulationError
+    SimulationError,
+    GameConfig
 )
 from src.models import FossilState
 
@@ -123,9 +125,9 @@ def print_help():
     print("\n" + "*" * 50)
     print(" ИНСТРУКЦИЯ ПОЛЬЗОВАТЕЛЯ ")
     print("*" * 50)
-    print("- Раскопки: тратят 10 энергии. Шанс зависит от навыка.")
-    print("- Анализ: тратит 5 энергии. Повышает знания о периоде.")
-    print("- Макеты: стоят 300 монет. Требуют изученных костей.")
+    print(f"- Раскопки: тратят {GameConfig.EXCAVATION_ENERGY_COST} энергии. Шанс зависит от навыка.")
+    print(f"- Анализ: тратит {GameConfig.RESEARCH_ENERGY_COST} энергии. Повышает знания о периоде.")
+    print(f"- Макеты: стоят {GameConfig.MODEL_CREATION_BUDGET_COST} монет. Требуют изученных костей.")
     print("- Выставки: приносят доход на основе качества макетов.")
     print("*" * 50 + "\n")
 

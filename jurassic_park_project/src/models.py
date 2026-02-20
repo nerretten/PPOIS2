@@ -19,12 +19,6 @@ class Difficulty(Enum):
     HARD = 3
 
 
-class DietType(Enum):
-    """Рацион динозавра."""
-    HERBIVORE = "Травоядный"
-    CARNIVORE = "Хищник"
-
-
 @dataclass
 class JurassicPeriod:
     """Модель знаний о Юрском периоде."""
