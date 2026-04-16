@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<students>
+  <student name="Никита" surname="Орлов" patronymic="Александрович" group="201" sick_skip="3" other_skip="1" unjustified_skip="0"/>
+  <student name="Олег" surname="Макаров" patronymic="Максимович" group="201" sick_skip="0" other_skip="0" unjustified_skip="5"/>
+  <student name="Лев" surname="Андреев" patronymic="Иванович" group="202" sick_skip="10" other_skip="0" unjustified_skip="0"/>
+  <student name="Макар" surname="Ильин" patronymic="Дмитриевич" group="202" sick_skip="0" other_skip="2" unjustified_skip="2"/>
+  <student name="Степан" surname="Николаев" patronymic="Сергеевич" group="302" sick_skip="1" other_skip="5" unjustified_skip="1"/>
+  <student name="Марк" surname="Захаров" patronymic="Андреевич" group="302" sick_skip="0" other_skip="0" unjustified_skip="0"/>
+  <student name="Евгений" surname="Павлов" patronymic="Игоревич" group="401" sick_skip="5" other_skip="1" unjustified_skip="3"/>
+  <student name="Арсений" surname="Егоров" patronymic="Павлович" group="401" sick_skip="0" other_skip="0" unjustified_skip="1"/>
+  <student name="Владислав" surname="Степанов" patronymic="Максимович" group="405" sick_skip="2" other_skip="4" unjustified_skip="0"/>
+  <student name="Тимур" surname="Алексеев" patronymic="Олегович" group="405" sick_skip="12" other_skip="0" unjustified_skip="0"/>
+  <student name="Руслан" surname="Григорьев" patronymic="Романович" group="502" sick_skip="0" other_skip="2" unjustified_skip="2"/>
+  <student name="Федор" surname="Дмитриев" patronymic="Викторович" group="502" sick_skip="4" other_skip="0" unjustified_skip="0"/>
+  <student name="Константин" surname="Матвеев" patronymic="Артемович" group="601" sick_skip="0" other_skip="7" unjustified_skip="0"/>
+  <student name="Эдуард" surname="Романов" patronymic="Николаевич" group="601" sick_skip="1" other_skip="1" unjustified_skip="5"/>
+  <student name="Вадим" surname="Данилов" patronymic="Владимирович" group="612" sick_skip="6" other_skip="0" unjustified_skip="0"/>
+  <student name="Вячеслав" surname="Титов" patronymic="Ярославович" group="612" sick_skip="0" other_skip="0" unjustified_skip="0"/>
+  <student name="Богдан" surname="Антонов" patronymic="Антонович" group="703" sick_skip="3" other_skip="3" unjustified_skip="1"/>
+  <student name="Артур" surname="Тимофеев" patronymic="Ильич" group="703" sick_skip="8" other_skip="0" unjustified_skip="0"/>
+  <student name="Леонид" surname="Фомин" patronymic="Степанович" group="801" sick_skip="0" other_skip="4" unjustified_skip="0"/>
+  <student name="Григорий" surname="Ширяев" patronymic="Денисович" group="801" sick_skip="2" other_skip="2" unjustified_skip="4"/>
+  <student name="Юрий" surname="Марков" patronymic="Петрович" group="904" sick_skip="0" other_skip="0" unjustified_skip="0"/>
+  <student name="Валентин" surname="Власов" patronymic="Григорьевич" group="904" sick_skip="5" other_skip="0" unjustified_skip="10"/>
+  <student name="Анатолий" surname="Афанасьев" patronymic="Леонидович" group="1001" sick_skip="1" other_skip="1" unjustified_skip="1"/>
+  <student name="Геннадий" surname="Денисов" patronymic="Борисович" group="1001" sick_skip="0" other_skip="0" unjustified_skip="0"/>
+  <student name="Станислав" surname="Крылов" patronymic="Евгеньевич" group="1002" sick_skip="4" other_skip="5" unjustified_skip="0"/>
+
+  <student name="Ева" surname="Орлова" patronymic="Александровна" group="201" sick_skip="0" other_skip="2" unjustified_skip="0"/>
+  <student name="Варвара" surname="Макарова" patronymic="Максимовна" group="201" sick_skip="1" other_skip="0" unjustified_skip="0"/>
+  <student name="Милана" surname="Андреева" patronymic="Ивановна" group="202" sick_skip="7" other_skip="1" unjustified_skip="2"/>
+  <student name="Вероника" surname="Ильина" patronymic="Дмитриевна" group="202" sick_skip="0" other_skip="3" unjustified_skip="0"/>
+  <student name="Арина" surname="Николаева" patronymic="Сергеевна" group="302" sick_skip="2" other_skip="0" unjustified_skip="4"/>
+  <student name="Кира" surname="Захарова" patronymic="Андреевна" group="302" sick_skip="0" other_skip="0" unjustified_skip="0"/>
+  <student name="Таисия" surname="Павлова" patronymic="Игоревна" group="401" sick_skip="5" other_skip="4" unjustified_skip="0"/>
+  <student name="Диана" surname="Егорова" patronymic="Павловна" group="401" sick_skip="0" other_skip="1" unjustified_skip="1"/>
+  <student name="Злата" surname="Степанова" patronymic="Максимовна" group="405" sick_skip="3" other_skip="0" unjustified_skip="0"/>
+  <student name="Олеся" surname="Алексеева" patronymic="Олеговна" group="405" sick_skip="1" other_skip="0" unjustified_skip="0"/>
+  <student name="Евгения" surname="Григорьева" patronymic="Романовна" group="502" sick_skip="0" other_skip="6" unjustified_skip="0"/>
+  <student name="Яна" surname="Дмитриева" patronymic="Викторовна" group="502" sick_skip="9" other_skip="0" unjustified_skip="2"/>
+  <student name="Ангелина" surname="Матвеева" patronymic="Артемовна" group="601" sick_skip="0" other_skip="2" unjustified_skip="3"/>
+  <student name="Марина" surname="Романова" patronymic="Николаевна" group="601" sick_skip="2" other_skip="0" unjustified_skip="0"/>
+  <student name="Светлана" surname="Данилова" patronymic="Владимировна" group="612" sick_skip="0" other_skip="0" unjustified_skip="0"/>
+  <student name="Ирина" surname="Титова" patronymic="Ярославовна" group="612" sick_skip="4" other_skip="2" unjustified_skip="0"/>
+  <student name="Галина" surname="Антонова" patronymic="Антоновна" group="703" sick_skip="0" other_skip="1" unjustified_skip="8"/>
+  <student name="Алла" surname="Тимофеева" patronymic="Ильинична" group="703" sick_skip="1" other_skip="0" unjustified_skip="0"/>
+  <student name="Карина" surname="Фомина" patronymic="Степановна" group="801" sick_skip="5" other_skip="0" unjustified_skip="1"/>
+  <student name="Алиса" surname="Ширяева" patronymic="Денисовна" group="801" sick_skip="0" other_skip="3" unjustified_skip="0"/>
+  <student name="Оксана" surname="Маркова" patronymic="Петровна" group="904" sick_skip="10" other_skip="0" unjustified_skip="0"/>
+  <student name="Тамара" surname="Власова" patronymic="Григорьевна" group="904" sick_skip="0" other_skip="0" unjustified_skip="0"/>
+  <student name="Мирослава" surname="Афанасьева" patronymic="Леонидовна" group="1001" sick_skip="2" other_skip="5" unjustified_skip="0"/>
+  <student name="Антонина" surname="Денисова" patronymic="Борисовна" group="1001" sick_skip="0" other_skip="1" unjustified_skip="1"/>
+  <student name="Вероника" surname="Крылова" patronymic="Евгеньевна" group="1002" sick_skip="3" other_skip="0" unjustified_skip="2"/>
+</students>
