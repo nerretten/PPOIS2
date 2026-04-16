@@ -85,7 +85,6 @@ class SearchDialog(QDialog):
         self.max_spin = QSpinBox()
         self.max_spin.setValue(100)
 
-        # Оборачиваем элементы диапазона в один виджет для удобного скрытия
         self.range_widget = QWidget()
         range_layout = QHBoxLayout(self.range_widget)
         range_layout.setContentsMargins(0, 0, 0, 0)
@@ -134,7 +133,6 @@ class SearchDialog(QDialog):
         self.main_layout.addLayout(pagination_layout)
         self.setLayout(self.main_layout)
 
-        # Подключаем логику скрытия полей
         self.criteria_combo.currentIndexChanged.connect(self.update_fields_visibility)
         self.update_fields_visibility()  # Вызываем при старте, чтобы скрыть лишнее
 

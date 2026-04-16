@@ -21,7 +21,6 @@ class PaginationManager:
         self.data = []
         self.current_page = 1
 
-        # Подключаем кнопки к методам самого менеджера
         self.btn_first.clicked.connect(self.first_page)
         self.btn_prev.clicked.connect(self.prev_page)
         self.btn_next.clicked.connect(self.next_page)
@@ -62,7 +61,6 @@ class PaginationManager:
         self.page_label.setText(f"Страница {self.current_page} из {max_page}")
         self.total_records_label.setText(f"Всего записей: {total}")
 
-    # Логика переключения страниц
     def first_page(self):
         self.current_page = 1
         self.update_view()
@@ -93,7 +91,6 @@ class Controller:
         self.model = model
         self.view = view
 
-        # Создаем менеджер пагинации для главного окна
         self.main_pagination = PaginationManager(
             self.view.table, self.view.btn_first, self.view.btn_prev,
             self.view.btn_next, self.view.btn_last, self.view.page_label,
@@ -111,7 +108,6 @@ class Controller:
         self.view.delete_action.triggered.connect(self.on_delete_clicked)
 
     def update_main_table(self):
-        # Просто передаем всех студентов в менеджер
         self.main_pagination.set_data(self.model.get_all_students())
 
     def open_file(self):
@@ -152,7 +148,6 @@ class Controller:
     def on_search_clicked(self):
         dialog = SearchDialog(self.view)
 
-        # Создаем второй независимый менеджер пагинации для диалогового окна поиска
         search_pagination = PaginationManager(
             dialog.result_table, dialog.btn_first, dialog.btn_prev,
             dialog.btn_next, dialog.btn_last, dialog.page_label,
@@ -168,7 +163,6 @@ class Controller:
                 "min_val": dialog.min_spin.value(),
                 "max_val": dialog.max_spin.value()
             }
-            # Ищем студентов и передаем результат в менеджер пагинации поиска
             results = self.model.search_students(c_type, **kwargs)
             search_pagination.set_data(results)
 
