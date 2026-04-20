@@ -1,0 +1,13 @@
+{
+    "screen_width": 800,
+    "screen_height": 600,
+    "fps": 60,
+    "physics": {
+        "max_speed": 6,
+        "acceleration": 0.5,
+        "friction": 0.2,
+        "gravity": 0.8,
+        "jump_power": 16,
+        "enemy_speed": 2
+    }
+}

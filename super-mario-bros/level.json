@@ -1,0 +1,20 @@
+{
+    "tile_size": 40,
+    "map": [
+        "                                                                                                                                                                ",
+        "                                                                                                                                                                ",
+        "                                                                                                                                                                ",
+        "                                                                                        Q                                                                       ",
+        "                                                                                                                                                                ",
+        "                                                                                                                                                                ",
+        "                                                       BQB                                C                                                  X                  ",
+        "                                                                                          B                                                 XX                  ",
+        "                                                                                                       C                                   XXX                  ",
+        "               Q      B?BQB           B            ?                                           BB     C C                                 XXXX                  ",
+        "                                                             T                                        X X       X                        XXXXX                  ",
+        "                                        T               T    p                                       XX XX     XX                       XXXXXX                  ",
+        "                                        p               p    p                                      XXX XXX   XXX                      XXXXXXX         B B B    ",
+        "             C       E                  p       E       p    p   E            E                    XXXX XXXX XXXX      E   E   E      XXXXXXXX      E E E    G  ",
+        "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+    ]
+}
