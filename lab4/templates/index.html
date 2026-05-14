@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% if error %}
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <strong>Ошибка!</strong> {{ error }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endif %}
+
+{% if message %}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Результат:</strong> {{ message }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endif %}
+
+
+<div class="row mb-4">
+
+<div class="row mb-4">
+    <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+            <div class="card-body">
+                <h5>🤠 {{ core.researcher.name }}</h5>
+                <div class="progress my-2">
+                    <div class="progress-bar bg-success" style="width: {{ core.researcher.energy }}%"></div>
+                </div>
+                <p class="small text-muted mb-1">Энергия: {{ core.researcher.energy }}%</p>
+                <p class="small text-muted">Навык: <strong>{{ core.researcher.skill_level }}</strong></p> <form action="/rest" method="post">
+                    <button type="submit" class="btn btn-sm btn-outline-info w-100">Отдохнуть (Восстановить ⚡)</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+            <div class="card-body text-center">
+                <h5>🏛️ Музей</h5>
+                <p class="mb-1">Бюджет: <strong>{{ "%.2f"|format(core.museum.budget) }}</strong></p>
+                <p class="mb-1">Репутация: {{ core.museum.reputation }}</p>
+                <p class="mb-2 small text-muted">Экспонатов: {{ core.museum.exhibits|length }}</p>
+
+                <form action="/exhibition" method="post">
+                    <button type="submit" class="btn btn-primary w-100"
+                        {% if not core.museum.exhibits %}disabled{% endif %}>
+                        Провести выставку 📢
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="d-grid gap-2 h-100">
+            <a href="/excavate" class="btn btn-warning d-flex align-items-center justify-content-center"><b>Ехать копать! 🗺️</b></a>
+            <a href="/help" class="btn btn-outline-secondary d-flex align-items-center justify-content-center">Правила и Климат 📖</a>
+        </div>
+    </div>
+</div>
+
+<h3>Инвентарь</h3>
+<div class="row">
+    {% if not core.researcher.inventory %}
+        <div class="col-12"><p class="text-muted">Инвентарь пуст. Пора копать!</p></div>
+    {% else %}
+        {% for fossil in core.researcher.inventory %}
+        <div class="col-md-4 mb-3">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-muted">{{ fossil.species }}</h6>
+                    <p class="card-text">{{ fossil.bone_type }}</p>
+                    <p class="small mb-1">Статус: <strong>{{ fossil.state.value }}</strong></p>
+                    <p class="small">Целостность: {{ fossil.integrity }}</p>
+
+                    {% if fossil.state.name == 'EXCAVATED' %}
+                    <form action="/research/{{ loop.index0 }}" method="post">
+                        <button type="submit" class="btn btn-sm btn-outline-primary w-100">Изучить в лабе (-5 ⚡)</button>
+                    </form>
+                    {% elif fossil.state.name == 'ANALYZED' %}
+                    <form action="/museum/create/{{ loop.index0 }}" method="post">
+                        <button type="submit" class="btn btn-sm btn-outline-success w-100">Создать макет (-300 💰)</button>
+                    </form>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    {% endif %}
+</div>
+{% endblock %}

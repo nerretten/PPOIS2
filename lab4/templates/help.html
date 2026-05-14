@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <div class="jumbotron p-5 mb-4 bg-light rounded-3 border shadow-sm">
+        <h1 class="display-5 fw-bold">🦖 Инструкция экспедиции</h1>
+        <hr>
+
+        <div class="row">
+            <div class="col-md-7">
+                <h3>🌍 Текущий период: {{ core.period.name|default("Юрский период") }}</h3>
+                <div class="alert alert-info">
+                    <strong>Сводка климата:</strong> {{ climate_info }}
+                </div>
+
+                <div class="mt-4">
+                    <h4>Основные механики:</h4>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <b>🗺️ Раскопки:</b> Тратят <strong>{{ config.EXCAVATION_ENERGY_COST }}</strong> энергии.
+                            Шанс успеха зависит от вашего навыка (сейчас: {{ core.researcher.skill_level }}) и сложности породы.
+                        </li>
+                        <li class="list-group-item">
+                            <b>🔬 Лаборатория:</b> Анализ тратит <strong>{{ config.RESEARCH_ENERGY_COST }}</strong> энергии.
+                            Повышает уровень знаний о периоде и ваш личный навык.
+                        </li>
+                        <li class="list-group-item">
+                            <b>🏛️ Мастерская:</b> Создание макета стоит <strong>{{ config.MODEL_CREATION_BUDGET_COST }}</strong> монет.
+                            Требуются предварительно изученные в лабе кости.
+                        </li>
+                        <li class="list-group-item">
+                            <b>📢 Выставки:</b> Приносят доход и репутацию.
+                            Сумма прибыли зависит от качества (научной точности) ваших экспонатов.
+                        </li>
+                        <li class="list-group-item">
+                            <b>⚡ Отдых:</b> Вы можете в любой момент вернуться в лагерь и полностью восстановить силы.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-5 bg-white p-4 rounded border">
+                <h4>Справка по ископаемым:</h4>
+                <p class="small text-muted">В процессе раскопок целостность костей может снизиться. Чем выше целостность и уровень знаний о периоде, тем качественнее получится музейный экспонат.</p>
+                <hr>
+                <p><b>Уровни знаний:</b></p>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: {{ core.period.knowledge_level }}%">
+                        {{ core.period.knowledge_level }}%
+                    </div>
+                </div>
+                <p class="small">Достигайте 30% и 70% прогресса в исследованиях, чтобы открыть более подробные данные о климате.</p>
+            </div>
+        </div>
+
+        <div class="mt-4">
+            <a href="/" class="btn btn-secondary">Назад в лагерь</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
